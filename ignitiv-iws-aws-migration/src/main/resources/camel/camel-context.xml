@@ -1,0 +1,21 @@
+ <routes xmlns="http://camel.apache.org/schema/spring">
+<!--    <route>-->
+<!--        <from uri="quartz://hello-world-xml?cron={{hello-world.cron}}"/>-->
+<!--        <transform>-->
+<!--            <simple>Hello World from XML</simple>-->
+<!--        </transform>-->
+<!--        <to uri="log:hello-world-xml"/>-->
+<!--    </route>-->
+     <!-- <route>
+         <from uri="quartz://ng-custom-schema?cron={{ng-custom-schema.cron}}"/>
+         <process ref="ngCustomSchema"/>
+         <log message="Processing completed " />
+     </route>
+      -->
+     <route>
+         <from uri="quartz://sort-categories-job-step?cron={{sort-category-job.cron}}"/>
+         <process ref="sortCategoriesJobStep"/>
+         <log message="Processing completed " />
+     </route>
+ </routes>
+
